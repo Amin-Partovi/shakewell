@@ -13,7 +13,7 @@ interface IParams extends ParsedUrlQuery {
   productId: string;
 }
 
-const PRODUCTS_RELATIVE_DIR = "../../utils/products.json";
+const PRODUCTS_RELATIVE_DIR = "../../../utils/products.json";
 
 const productsJson = getAllData(PRODUCTS_RELATIVE_DIR);
 const products = JSON.parse(productsJson);
