@@ -22,6 +22,12 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## how to use
+each link in the root page navigate you to the assignment's tasks
+**products **navigate to the products/0 which is the static page for product 0. you can change the id in the address bar and have access to it's specific product. e.g. products/5 render HTML for the product 5.
+
+list of the products is a json file, and the data is readed synchronously. the page will be generate every 10 seconds. 
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
