@@ -25,7 +25,13 @@ interface Props {
 const Card: React.FC<Props> = ({ title, image }) => {
   return (
     <StyledDiv>
-      <Image src={image} alt={title} width={150} height={150} />
+      <Image
+        src={image}
+        alt={title}
+        width={150}
+        height={150}
+        loader={() => image}
+      />
 
       <Title>{title}</Title>
     </StyledDiv>
