@@ -1,13 +1,10 @@
 import { GetStaticProps } from "next";
 
-import getAllData from "@/utils/getAlldata";
 import CardList from "@/components/cardList/CardList";
-
-const DATA_RELATIVE_DIR = "../../utils/cardItems.json";
+import getCardItems from "@/utils/getCardItems";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const dataJson = getAllData(DATA_RELATIVE_DIR);
-  const data = JSON.parse(dataJson);
+  const data = getCardItems();
 
   return {
     props: { data },

@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 
 import Product from "@/components/product/Product";
-import getAllData from "@/utils/getAlldata";
+import getProducts from "@/utils/getProducts";
 
 export interface ProductInterface {
   value: string;
@@ -13,14 +13,10 @@ interface IParams extends ParsedUrlQuery {
   productId: string;
 }
 
-const PRODUCTS_RELATIVE_DIR = "../../../utils/products.json";
-
-const productsJson = getAllData(PRODUCTS_RELATIVE_DIR);
-const products = JSON.parse(productsJson);
-
 export const getStaticProps: GetStaticProps = async (context) => {
   const { productId } = context.params as IParams;
 
+  const products = getProducts();
   const product = products.find(
     (product: ProductInterface) => product.id === +productId
   );
@@ -32,6 +28,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const products = getProducts();
   const paths = products.map((product: { value: string; id: number }) => ({
     params: { productId: product.id.toString() },
   }));
