@@ -24,9 +24,23 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## how to use
 each link in the root page navigate you to the assignment's tasks
-**products **navigate to the products/0 which is the static page for product 0. you can change the id in the address bar and have access to it's specific product. e.g. products/5 render HTML for the product 5.
 
-list of the products is a json file, and the data is readed synchronously. the page will be generate every 10 seconds. 
+### task 1
+**products **navigate to the /products/0 which is the static page for product 0. you can change the id in the address bar and have access to it's specific product. e.g. /products/5 render HTML for the product 5.
+
+list of the products is a json file, and the data is readed synchronously. the page will be generate every 10 seconds.
+
+### task 2
+a list of cards is provided in the /items and it is also available through the card items navigation button. there are a title and an image in each card.
+
+**Styled Components:** all the styling in this task is implemented by styled component approach, and it is responsive too.
+
+**tests:** two test are considered for this task which evaluate the existance of the image and title in each Card.
+
+### task 3
+tabs component takes activeTab and tabs props and strict **type safety** is considered for this component.
+
+**tests:** two tests are considered for this task it should throw an error if activeTab is not available in the keys of tabs, and should not throw an error if activeTab is available in the keys of tabs
 
 ## Learn More
 

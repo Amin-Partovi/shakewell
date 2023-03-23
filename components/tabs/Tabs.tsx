@@ -1,4 +1,3 @@
-import { error } from "console";
 import React, { useState } from "react";
 import styles from "./tabs.module.css";
 
@@ -22,7 +21,7 @@ function Tabs<K extends string, T extends Tabs<K>>(props: Props<K, T>) {
   const { tabs = [], activeTab, onChange, fluid = false } = props;
 
   if (!tabs.map((tab) => tab.key).includes(activeTab)) {
-    throw error("invalid activeTab value");
+    throw Error("invalid activeTab value");
   }
   const [currentTab, setCurrentTab] = useState<ActiveTab<K, T>>(
     activeTab ?? tabs[0]["key"]

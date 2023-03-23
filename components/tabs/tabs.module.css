@@ -1,5 +1,3 @@
-
-
 .tab-container {
   background-color: rgb(247, 247, 247);
   border-radius: 10px;
@@ -8,6 +6,7 @@
   padding: 0.3125rem;
   width: fit-content;
   gap: 0.3125rem;
+  margin: 100px;
 }
 
 .fluid {
