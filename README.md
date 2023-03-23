@@ -30,6 +30,8 @@ each link in the root page navigate you to the assignment's tasks
 
 list of the products is a json file, and the data is readed synchronously. the page will be generate every 10 seconds.
 
+the performance is optimal but build time is not optimized as all the 5000 product pages are generated in build time. If we use fallback true and cache smaller number of pages we can have shorter build time. 
+
 ### task 2
 a list of cards is provided in the /items and it is also available through the card items navigation button. there are a title and an image in each card.
 
