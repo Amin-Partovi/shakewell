@@ -1,0 +1,40 @@
+
+
+.tab-container {
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  display: flex;
+  height: 2.5rem;
+  padding: 0.3125rem;
+  width: fit-content;
+  gap: 0.3125rem;
+}
+
+.fluid {
+  width: 100%;
+}
+
+.medium {
+  height: 3.125rem;
+}
+
+.tab {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: gray;
+  border-radius: 10px;
+  list-style: none;
+  min-width: 6.25rem;
+  padding: 0.3125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.active {
+  background-color: white;
+  color: rgb(79, 79, 79);
+  box-shadow: 0 3px 12px -3px rgba(0, 0, 0, 0.1);
+}
